@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StartupServices xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="Stateful5_PartitionCount" Value="1" />
+    <Parameter Name="Stateful5_MinReplicaSetSize" Value="3" />
+    <Parameter Name="Stateful5_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="Web4_PartitionCount" Value="1" />
+    <Parameter Name="Web4_MinReplicaSetSize" Value="3" />
+    <Parameter Name="Web4_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="Web3_InstanceCount" Value="-1" />
+    <Parameter Name="Stateful4_PartitionCount" Value="1" />
+    <Parameter Name="Stateful4_MinReplicaSetSize" Value="3" />
+    <Parameter Name="Stateful4_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="Stateful3_PartitionCount" Value="1" />
+    <Parameter Name="Stateful3_MinReplicaSetSize" Value="3" />
+    <Parameter Name="Stateful3_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="Stateful2_PartitionCount" Value="1" />
+    <Parameter Name="Stateful2_MinReplicaSetSize" Value="3" />
+    <Parameter Name="Stateful2_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="Stateless3_InstanceCount" Value="-1" />
+    <Parameter Name="Stateless2_InstanceCount" Value="-1" />
+    <Parameter Name="Stateful1_PartitionCount" Value="1" />
+    <Parameter Name="Stateful1_MinReplicaSetSize" Value="3" />
+    <Parameter Name="Stateful1_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="Web2_PartitionCount" Value="1" />
+    <Parameter Name="Web2_MinReplicaSetSize" Value="3" />
+    <Parameter Name="Web2_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="Stateless1_InstanceCount" Value="-1" />
+    <Parameter Name="Web1_InstanceCount" Value="-1" />
+  </Parameters>
+</StartupServices>
