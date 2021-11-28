@@ -47,7 +47,7 @@ namespace Stateful5
 
             var myDictionary = await this.StateManager.GetOrAddAsync<IReliableDictionary<string, long>>("myDictionary");
 
-            ScheduleMessageConsumer consumer = new ScheduleMessageConsumer(null);
+            //ScheduleMessageConsumer consumer = new ScheduleMessageConsumer(new DefaultHangfireComponentResolver());
             
             RabbitMqHostAddress address = new RabbitMqHostAddress("localhost", 80, string.Empty);
 
@@ -60,7 +60,7 @@ namespace Stateful5
                     var result = await myDictionary.TryGetValueAsync(tx, "Counter");
 
                     ServiceEventSource.Current.ServiceMessage(this.Context, "Current Counter Value: {0}",
-                        result.HasValue ? result.Value.ToString() : consumer.GetType().Name);
+                        result.HasValue ? result.Value.ToString() : "consumer.GetType().Name");
 
                     await myDictionary.AddOrUpdateAsync(tx, "Counter", 0, (key, value) => ++value);
 

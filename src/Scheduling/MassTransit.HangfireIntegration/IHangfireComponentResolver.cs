@@ -20,7 +20,7 @@ namespace MassTransit.HangfireIntegration
     }
 
 
-    class DefaultHangfireComponentResolver :
+    public class DefaultHangfireComponentResolver :
         IHangfireComponentResolver
     {
         static readonly Lazy<IHangfireComponentResolver> Cached;
@@ -35,7 +35,7 @@ namespace MassTransit.HangfireIntegration
             Cached = new Lazy<IHangfireComponentResolver>(() => new DefaultHangfireComponentResolver());
         }
 
-        DefaultHangfireComponentResolver()
+        public DefaultHangfireComponentResolver()
         {
             _jobStorage = new Lazy<JobStorage>(() => JobStorage.Current, LazyThreadSafetyMode.PublicationOnly);
             _jobFilterProvider = new Lazy<IJobFilterProvider>(() => JobFilterProviders.Providers, LazyThreadSafetyMode.PublicationOnly);
